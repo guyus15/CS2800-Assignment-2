@@ -1,4 +1,4 @@
-package uk.ac.rhul.cs2800.stack;
+package uk.ac.rhul.cs2800.calculator;
 
 /**
  * This exception should be thrown when a method which requires the stack 
