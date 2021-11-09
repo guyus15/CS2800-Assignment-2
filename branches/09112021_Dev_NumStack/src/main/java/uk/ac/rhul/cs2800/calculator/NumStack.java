@@ -18,7 +18,6 @@ public class NumStack {
     stack = new Stack();
   }
   
-  
   /**
    * Push a float value onto the stack.
    *
