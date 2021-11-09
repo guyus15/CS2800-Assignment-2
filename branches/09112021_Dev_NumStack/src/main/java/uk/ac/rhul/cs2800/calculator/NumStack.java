@@ -37,6 +37,15 @@ public class NumStack {
     return stack.pop().getNumber();
   }
   
+  /**
+   * Returns true if the NumStack is empty.
+   *
+   * @return true or false depending if NumStack contains any items.
+   */
+  public boolean isEmpty() {
+    return size() == 0;
+  }
+  
   int size() {
     return stack.size();
   }
