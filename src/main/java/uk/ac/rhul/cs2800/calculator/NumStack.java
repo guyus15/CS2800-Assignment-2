@@ -27,7 +27,16 @@ public class NumStack {
     stack.push(floatValue);
   }
  
- 
+  /**
+   * Pop a value off the stack.
+   *
+   * @return The value of the float which has been popped off the stack.
+   * @throws EmptyStackException when called if the stack size is zero.
+   */
+  public float pop() throws BadTypeException, EmptyStackException {
+    return stack.pop().getNumber();
+  }
+  
   int size() {
     return stack.size();
   }
