@@ -1,10 +1,9 @@
-package uk.ac.rhul.cs2800.stack;
+package uk.ac.rhul.cs2800.calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * This test case tests the Type enum.

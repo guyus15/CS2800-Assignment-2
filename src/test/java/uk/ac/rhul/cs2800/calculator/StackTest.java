@@ -1,4 +1,4 @@
-package uk.ac.rhul.cs2800.stack;
+package uk.ac.rhul.cs2800.calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

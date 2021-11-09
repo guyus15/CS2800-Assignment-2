@@ -1,4 +1,4 @@
-package uk.ac.rhul.cs2800.stack;
+package uk.ac.rhul.cs2800.calculator;
 
 /**
  * This enum is used to determine an entry's type.

@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>uk.ac.rhul.cs2800</groupId>
-	<artifactId>stack</artifactId>
+	<artifactId>calculator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>stack</name>
