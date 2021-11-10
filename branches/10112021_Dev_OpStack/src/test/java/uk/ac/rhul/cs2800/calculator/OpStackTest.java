@@ -2,6 +2,7 @@ package uk.ac.rhul.cs2800.calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -75,7 +76,7 @@ public class OpStackTest {
   @Test // Test 4
   void testSizeWhenPop() throws BadTypeException, EmptyStackException {
     /*
-     * This test ensures that the size of the NumStack decreases when we pop off an object and the
+     * This test ensures that the size of the OpStack decreases when we pop off an object and the
      * stack contains multiple objects.
      */
 
@@ -96,5 +97,28 @@ public class OpStackTest {
      */
 
     assertThrows(EmptyStackException.class, () -> opStack.pop());
+  }
+  
+  @Test // Test 6
+  void testIsEmpty() {
+    /*
+     * This test ensures that the isEmpty method returns true when the stack contains no elements.
+     * 
+     * To make this test work, I had to add a isEmpty method to the OpStack which uses
+     * the size of the stack to determine if it is empty.
+     */
+
+    assertEquals(opStack.isEmpty(), true);
+  }
+  
+  @Test // Test 7
+  void testIsNotEmpty() {
+    /*
+     * This test ensures that the isEmpty method returns false 
+     * when the stack contains some elements.
+     */
+    
+    opStack.push(Symbol.INVALID);
+    assertEquals(opStack.isEmpty(), false);
   }
 }

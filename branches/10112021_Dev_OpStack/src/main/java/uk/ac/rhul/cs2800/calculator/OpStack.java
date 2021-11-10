@@ -35,6 +35,15 @@ public class OpStack {
     return stack.pop().getSymbol();
   }
   
+  /**
+   * Returns true if the OpStack is empty.
+   *
+   * @return true or false depending if OpStack contains any items.
+   */
+  public boolean isEmpty() {
+    return size() == 0;
+  }
+  
   int size() {
     return stack.size();
   }
