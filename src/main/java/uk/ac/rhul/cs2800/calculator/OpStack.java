@@ -25,6 +25,16 @@ public class OpStack {
     stack.push(symbolValue);
   }
   
+  /**
+   * Pop a value off the stack.
+   *
+   * @return The value of the Symbol which has been popped off the stack.
+   * @throws EmptyStackException when called if the stack size is zero.
+   */
+  public Symbol pop() throws BadTypeException, EmptyStackException {
+    return stack.pop().getSymbol();
+  }
+  
   int size() {
     return stack.size();
   }
