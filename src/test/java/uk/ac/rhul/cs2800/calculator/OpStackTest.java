@@ -34,4 +34,23 @@ public class OpStackTest {
     // Check if top most stack item is the item we just pushed
     assertEquals(opStack.stack.top().getSymbol(), testSymbol);
   }
+  
+  @Test // Test 2
+  void testPushFiveTimes() throws BadTypeException, EmptyStackException {
+    /*
+     * This test ensures that we can successfully push onto the stack more than once with every as
+     * expected.
+     */
+    
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    
+    // Check if the size increases when we push (should be 5 in this case)
+    assertEquals(opStack.size(), 5);
+    // Check if the top most stack item is the item we last pushed.
+    assertEquals(opStack.stack.top().getSymbol(), Symbol.INVALID);
+  }
 }
