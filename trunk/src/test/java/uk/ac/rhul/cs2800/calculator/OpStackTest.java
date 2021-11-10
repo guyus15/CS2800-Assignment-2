@@ -7,88 +7,88 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * This test case tests the NumStack class.
+ * This test case tests the OpStack class. 
  *
  * @author chamb
  */
-public class NumStackTest {
-  NumStack numStack;
-
+public class OpStackTest {
+  OpStack opStack;
+  
   @BeforeEach
-  void createNumStack() {
-    numStack = new NumStack();
+  void createOpStack() {
+    opStack = new OpStack();
   }
-
+  
   @Test // Test 1
-  void testFloatValuePush() throws BadTypeException, EmptyStackException {
+  void testSymbolPush() throws BadTypeException, EmptyStackException {
     /*
-     * This test ensures that we can push entries of type float to the NumStack without error.
+     * This test ensures that we can push entries of type float to the OpStack without error.
      * 
-     * To make this test work, I had to create a push method for the NumStack class, as well as a
+     * To make this test work, I had to create a push method for the OpStack class, as well as a
      * private size method so the class can keep track of the stack's size.
      */
-
-    float testNumber = 0.0f;
-    numStack.push(testNumber);
+    
+    Symbol testSymbol = Symbol.INVALID;
+    opStack.push(testSymbol);
     // Check if size increases when we push
-    assertEquals(numStack.size(), 1);
+    assertEquals(opStack.size(), 1);
     // Check if top most stack item is the item we just pushed
-    assertEquals(numStack.stack.top().getNumber(), testNumber);
+    assertEquals(opStack.stack.top().getSymbol(), testSymbol);
   }
-
+  
   @Test // Test 2
   void testPushFiveTimes() throws BadTypeException, EmptyStackException {
     /*
      * This test ensures that we can successfully push onto the stack more than once with every as
      * expected.
      */
-
-    numStack.push(0.0f); // 1
-    numStack.push(1.0f); // 2
-    numStack.push(2.0f); // 3
-    numStack.push(3.0f); // 4
-    numStack.push(4.0f); // 5
-
+    
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    
     // Check if the size increases when we push (should be 5 in this case)
-    assertEquals(numStack.size(), 5);
+    assertEquals(opStack.size(), 5);
     // Check if the top most stack item is the item we last pushed.
-    assertEquals(numStack.stack.top().getNumber(), 4.0f);
+    assertEquals(opStack.stack.top().getSymbol(), Symbol.INVALID);
   }
-
+  
   @Test // Test 3
   void testPushThenPop() throws BadTypeException, EmptyStackException {
     /*
      * This test ensures that the program follows the intended behaviour when we push a value before
      * popping it.
      * 
-     * To make this test work, I had to add a pop method to the NumStack class which calls the
+     * To make this test work, I had to add a pop method to the OpStack class which calls the
      * underlying pop method of the Stack class and returns the value.
      */
-
-    float testNumber = 1.0f;
-    numStack.push(testNumber);
-    float poppedNumber = numStack.pop();
+    
+    Symbol testSymbol = Symbol.INVALID;
+    opStack.push(testSymbol);
+    Symbol poppedSymbol = opStack.pop();
     
     // Check that the value we pushed on and the value we pushed off are equal.
-    assertEquals(poppedNumber, testNumber);
+    assertEquals(poppedSymbol, testSymbol);
   }
-
+  
   @Test // Test 4
   void testSizeWhenPop() throws BadTypeException, EmptyStackException {
     /*
-     * This test ensures that the size of the NumStack decreases when we pop off an object and the
+     * This test ensures that the size of the OpStack decreases when we pop off an object and the
      * stack contains multiple objects.
      */
 
-    numStack.push(0.0f);
-    numStack.push(1.0f);
-    numStack.push(2.0f);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
+    opStack.push(Symbol.INVALID);
 
-    numStack.pop();
-
-    assertEquals(numStack.size(), 2);
+    opStack.pop();
+    
+    assertEquals(opStack.size(), 2);
   }
-
+  
   @Test // Test 5
   void testPopWhenEmpty() throws BadTypeException, EmptyStackException {
     /*
@@ -96,19 +96,19 @@ public class NumStackTest {
      * thrown.
      */
 
-    assertThrows(EmptyStackException.class, () -> numStack.pop());
+    assertThrows(EmptyStackException.class, () -> opStack.pop());
   }
-
+  
   @Test // Test 6
   void testIsEmpty() {
     /*
      * This test ensures that the isEmpty method returns true when the stack contains no elements.
      * 
-     * To make this test work, I had to add a isEmpty method to the NumStack which uses
+     * To make this test work, I had to add a isEmpty method to the OpStack which uses
      * the size of the stack to determine if it is empty.
      */
 
-    assertEquals(numStack.isEmpty(), true);
+    assertEquals(opStack.isEmpty(), true);
   }
   
   @Test // Test 7
@@ -118,8 +118,7 @@ public class NumStackTest {
      * when the stack contains some elements.
      */
     
-    numStack.push(0.0f);
-    assertEquals(numStack.isEmpty(), false);
+    opStack.push(Symbol.INVALID);
+    assertEquals(opStack.isEmpty(), false);
   }
-  
 }
