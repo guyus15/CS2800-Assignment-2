@@ -68,7 +68,8 @@ public class NumStackTest {
     float testNumber = 1.0f;
     numStack.push(testNumber);
     float poppedNumber = numStack.pop();
-
+    
+    // Check that the value we pushed on and the value we pushed off are equal.
     assertEquals(poppedNumber, testNumber);
   }
 
