@@ -29,10 +29,16 @@ public class OpStack {
    * Pop a value off the stack.
    *
    * @return The value of the Symbol which has been popped off the stack.
+   * @throws BadTypeException this will never be thrown.
    * @throws EmptyStackException when called if the stack size is zero.
    */
   public Symbol pop() throws BadTypeException, EmptyStackException {
-    return stack.pop().getSymbol();
+    try {
+      return stack.pop().getSymbol();
+    } catch (BadTypeException bte) {
+      // BadTypeException will never be thrown because a symbol will always be returned.
+      return Symbol.INVALID;
+    }
   }
   
   /**

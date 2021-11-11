@@ -31,10 +31,16 @@ public class NumStack {
    * Pop a value off the stack.
    *
    * @return The value of the float which has been popped off the stack.
+   * @throws BadTypeException this will never be thrown.
    * @throws EmptyStackException when called if the stack size is zero.
    */
   public float pop() throws BadTypeException, EmptyStackException {
-    return stack.pop().getNumber();
+    try {
+      return stack.pop().getNumber();
+    } catch (BadTypeException bte) {
+      // BadTypeException will never be thrown because a number will always be returned.
+      return Integer.MAX_VALUE;
+    }
   }
   
   /**
