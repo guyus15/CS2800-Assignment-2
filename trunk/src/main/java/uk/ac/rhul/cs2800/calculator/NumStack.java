@@ -1,6 +1,5 @@
 package uk.ac.rhul.cs2800.calculator;
 
-
 /**
  * The NumStack class acts as a facade for the Stack class to hide unnecessary detail.
  *
