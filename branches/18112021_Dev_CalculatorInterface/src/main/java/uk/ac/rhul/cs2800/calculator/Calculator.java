@@ -5,10 +5,10 @@ package uk.ac.rhul.cs2800.calculator;
  *
  * @author chamb
  */
-public final class Calculator {
+public class Calculator {
 
   // Does not need to be public as all access to the Calculator is done via getInstance().
-  private Calculator() {}
+  protected Calculator() {}
   
   public static Calculator instance = null;
   
@@ -32,7 +32,7 @@ public final class Calculator {
    * @param stringToEvaluate the String to be evaluated.
    * @return the evaluation of the arithmetic expression String
    */
-  public float evaluate(String stringToEvaluate) {
+  public float evaluate(String stringToEvaluate) throws InvalidExpressionException {
     return 0;
   }
 }
