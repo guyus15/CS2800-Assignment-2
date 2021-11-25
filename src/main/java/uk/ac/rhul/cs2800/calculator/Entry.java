@@ -143,13 +143,6 @@ public class Entry {
     number = newNumber;
   }
 
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(number, string, symbol, type);
-  }
-
-
   @Override
   public boolean equals(Object obj) {
     if (this == obj) {
