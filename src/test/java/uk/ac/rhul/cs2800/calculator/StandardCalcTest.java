@@ -23,7 +23,7 @@ public class StandardCalcTest {
   @Test // Test 1
   void testInvalidExpression() {
     /*
-     * This tests ensures that an InvalidExpressionException is thrown when 
+     * This test ensures that an InvalidExpressionException is thrown when 
      * an invalid expression is given as a parameter to evaluate().
      * 
      * To get this test to work I first had to create the StandardCalc class. In order 
@@ -32,5 +32,17 @@ public class StandardCalcTest {
      */
     
     assertThrows(InvalidExpressionException.class, () -> stdCalc.evaluate("test"));
+  }
+  
+  @Test // Test 2
+  void testValidExpression() {
+    /*
+     * This test ensures that the correct evaluation of an evaluation string is returned when
+     * a valid expression is given as a parameter to evaluate().
+     * 
+     * 
+     */
+    
+    
   }
 }
