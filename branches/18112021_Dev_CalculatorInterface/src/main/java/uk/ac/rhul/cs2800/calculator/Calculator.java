@@ -1,9 +1,9 @@
 package uk.ac.rhul.cs2800.calculator;
 
 /**
- *  Allows the calculation of String expressions. 
+ *  Allows the calculation of String expressions. Based off Dave Cohen's code. 
  *
- * @author chamb
+ * @author chamb, Dave Cohen
  */
 public class Calculator {
 
@@ -32,7 +32,17 @@ public class Calculator {
    * @param stringToEvaluate the String to be evaluated.
    * @return the evaluation of the arithmetic expression String
    */
-  public float evaluate(String stringToEvaluate) throws InvalidExpressionException {
+  public static float evaluate(String stringToEvaluate) throws InvalidExpressionException {
+    /*
+     * An expression is considered invalid if the stringToEvaluate is 
+     * blank, empty or does not contain any integers (determined by matches(".*\\d.*"))
+     */
+    if (stringToEvaluate.isBlank()
+        || stringToEvaluate.isEmpty()
+        || !stringToEvaluate.matches(".*\\d.*")) {
+      throw new InvalidExpressionException("Invalid expression.");
+    }
+    
     return 0;
   }
 }
