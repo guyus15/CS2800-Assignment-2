@@ -1,38 +1,25 @@
 package uk.ac.rhul.cs2800.calculator;
 
 /**
- *  Allows the calculation of String expressions. Based off Dave Cohen's code. 
+ *  An abstract class designed to define the implementation of Calculators 
+ *  for the calculation of String expressions. 
  *
- * @author chamb, Dave Cohen
+ * @author chamb
  */
-public class Calculator {
-
-  // Does not need to be public as all access to the Calculator is done via getInstance().
-  protected Calculator() {}
-  
-  public static Calculator instance = null;
+public abstract class Calculator {
   
   /**
-   * Accessing the Calculator Singleton pattern. The first time this is called
-   * a new instance of a Calculator will be created.
-   *
-   * @return the current instance of the Calculator Singleton.
+   * Create an instance of a Calculator.
    */
-  public static Calculator getInstance() {
-    if (instance == null) {
-      instance = new Calculator();
-    }
-    
-    return instance;
-  }
+  public Calculator() {}
   
   /**
-   * Called when we want to evaluate an arithmetic expression String.
+   * Get the evaluation of an arithmetic expression String.
    *
    * @param stringToEvaluate the String to be evaluated.
    * @return the evaluation of the arithmetic expression String
    */
-  public static float evaluate(String stringToEvaluate) throws InvalidExpressionException {
+  public float evaluate(String stringToEvaluate) throws InvalidExpressionException {
     /*
      * An expression is considered invalid if the stringToEvaluate is 
      * blank, empty or does not contain any integers (determined by matches(".*\\d.*"))
