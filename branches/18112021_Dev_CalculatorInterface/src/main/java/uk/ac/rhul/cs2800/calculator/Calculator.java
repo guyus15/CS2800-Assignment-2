@@ -17,9 +17,15 @@ public abstract class Calculator {
    * Get the evaluation of an arithmetic expression String.
    *
    * @param stringToEvaluate the String to be evaluated.
-   * @return the evaluation of the arithmetic expression String
+   * @return the evaluation of the arithmetic expression String.
+   * @throws EmptyStackException if we try to operate on a stack with a size of zero..
+   * @throws BadTypeException this will never be thrown.
    */
-  public float evaluate(String stringToEvaluate) throws InvalidExpressionException {
+  public float evaluate(String stringToEvaluate)
+      throws
+      InvalidExpressionException,
+      EmptyStackException,
+      BadTypeException {
     /*
      * An expression is considered invalid if the stringToEvaluate is 
      * blank, empty or does not contain any integers (determined by matches(".*\\d.*"))
