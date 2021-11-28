@@ -31,4 +31,23 @@ public enum Symbol {
   public String toString() {
     return symbolString;
   }
+  
+  /**
+   * Converts a String to the equivalent symbol enum.
+   *
+   * @param strSymbol the symbol String we want to convert.
+   * @return the Symbol corresponding to the given String. Returns invalid symbol if none found.
+   */
+  public static Symbol toSymbol(String strSymbol) {
+    Symbol currentSymbol = Symbol.INVALID;
+    
+    for (Symbol symbol : Symbol.values()) {
+      if (symbol.toString().equals(strSymbol)) {
+        currentSymbol = symbol;
+        break;
+      }
+    }
+    
+    return currentSymbol;
+  }
 }
