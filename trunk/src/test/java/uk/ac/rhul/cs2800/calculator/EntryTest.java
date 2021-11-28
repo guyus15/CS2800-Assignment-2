@@ -330,4 +330,18 @@ public class EntryTest {
     assertEquals(stringEntry.toString(), "test");
     assertEquals(symbolEntry.toString(), "Invalid");
   }
+  
+  @SuppressWarnings("unlikely-arg-type")
+  @Test // Test 20
+  void testEntryEquals() {
+    
+    // Testing if two of the same objects returns true
+    assertTrue(floatEntry.equals(floatEntry));
+    
+    // Testing if an object and a null value returns false.
+    assertFalse(floatEntry.equals(null));
+    
+    // Testing if an object and another object being of different types returns false.
+    assertFalse(floatEntry.equals(0.0f));
+  }
 }
