@@ -14,17 +14,26 @@ import javafx.stage.Stage;
  * @author chamb
  */
 public class GuiView extends Application {
-
+  
+  static FXMLLoader loader;
+  
   @Override
   public void start(Stage primaryStage) {
     Parent root;
+    
     try {
-      root = FXMLLoader.load(getClass().getClassLoader().getResource("Calculator.fxml"));
+      loader = new FXMLLoader();
+      loader.setClassLoader(getClass().getClassLoader());
+      loader.setLocation(getClass().getClassLoader().getResource("Calculator.fxml"));
+      
+      root = loader.load();
+      
     } catch (IOException e) {
+      
       e.printStackTrace();
       return;
     }
-
+        
     Scene scene = new Scene(root, 600, 400);
 
     primaryStage.setTitle("Calculator");

@@ -19,7 +19,7 @@ public class Driver {
     if (System.console() == null) {
       // Launch GUI application
       System.out.println("Running the GUI application.");
-
+      
       // Initiates a new thread to run the GUI view application on.
       // This code allows the decoupling of the main class and the GuiView class.
       new Thread() {
@@ -28,6 +28,7 @@ public class Driver {
           javafx.application.Application.launch(GuiView.class);
         }
       }.start();
+            
     } else {
       // Launch ASCII application
       System.out.println("Running the ASCII application.");
