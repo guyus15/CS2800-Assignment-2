@@ -133,6 +133,7 @@ public class StandardCalcTest {
      */
     
     // These should not be valid as they contain unbalanced operands.
+    assertThrows(InvalidExpressionException.class, () -> stdCalc.evaluate("2 3 /"));
     assertThrows(InvalidExpressionException.class, () -> stdCalc.evaluate("3 +"));
     assertThrows(InvalidExpressionException.class, () -> stdCalc.evaluate("(10 / 2) +"));
     assertThrows(InvalidExpressionException.class, () -> stdCalc.evaluate("10 * 9 * /"));

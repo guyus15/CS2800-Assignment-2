@@ -28,7 +28,7 @@ public class StandardCalc extends Calculator {
    * @param stringToEvaluate the String to be evaluated.
    * @return the evaluation of the infix arithmetic expression string.
    * @throws EmptyStackException when called if the stack size is zero.
-   * @throws BadTypeException this will never be thrown.
+   * @throws BadTypeException this will never be thrown due the use of facade.
    */
   @Override
   public float evaluate(String stringToEvaluate)
