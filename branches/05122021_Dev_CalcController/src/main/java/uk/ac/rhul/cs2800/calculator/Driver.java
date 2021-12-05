@@ -35,7 +35,9 @@ public class Driver {
       
     } else {
       // Launch ASCII application
-      System.out.println("Running the ASCII application.");
+      AsciiViewController asciiView = new AsciiViewController();
+      calcController.setView(asciiView);
+      asciiView.mainMenu();
     }
   }
 }
