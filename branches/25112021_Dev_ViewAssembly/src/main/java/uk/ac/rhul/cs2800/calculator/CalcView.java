@@ -5,7 +5,7 @@ package uk.ac.rhul.cs2800.calculator;
  *
  * @author chamb
  */
-public interface View {
+public interface CalcView {
 
   /**
    * Returns a string expression given as input.
