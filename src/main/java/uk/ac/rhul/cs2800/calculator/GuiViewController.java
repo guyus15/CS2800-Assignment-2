@@ -72,18 +72,12 @@ public class GuiViewController implements CalcView {
       setAnswer(answer);
       
       outputText.setStyle("-fx-background-color: white;"); // Reset red error background colour.
-    } catch (BadTypeException e) {
-      setAnswer("Unknown error has occured.");
-      e.printStackTrace();
-      
-      outputText.setStyle("-fx-text-fill: red;"); // Set red error background colour.
     } catch (Exception e) {
       setAnswer(e.getMessage());
       
       outputText.setStyle("-fx-background-color: red;"); // Set red error background colour.
     }
   }
-  
   
   /**
    * Sets the mode of the calculator to calculate infix expressions.
