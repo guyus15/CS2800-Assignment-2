@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author chamb
  */
-public class AsciiViewController implements View {
+public class AsciiViewController implements CalcView {
   
   Scanner scanner;
   

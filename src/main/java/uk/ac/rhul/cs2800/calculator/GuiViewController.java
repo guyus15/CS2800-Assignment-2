@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
  *
  * @author chamb
  */
-public class GuiViewController implements View {
+public class GuiViewController implements CalcView {
   
   @FXML
   TextField inputText;
