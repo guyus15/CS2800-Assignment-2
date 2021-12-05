@@ -25,8 +25,10 @@ public class GuiView extends Application {
       loader = new FXMLLoader();
       loader.setClassLoader(getClass().getClassLoader());
       loader.setLocation(getClass().getClassLoader().getResource("Calculator.fxml"));
-      
+           
       root = loader.load();
+      
+      Driver.calcController.setView(loader.getController());
       
     } catch (IOException e) {
       

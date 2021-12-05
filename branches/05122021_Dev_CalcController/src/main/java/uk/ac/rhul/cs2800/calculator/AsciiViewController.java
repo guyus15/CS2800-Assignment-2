@@ -12,6 +12,8 @@ public class AsciiViewController implements CalcView {
   
   Scanner scanner;
   
+  CalcController observer;
+  
   /**
    * Creates an instance of the {@code AsciiViewController}.
    */
@@ -37,16 +39,7 @@ public class AsciiViewController implements CalcView {
   /**
    * Add a {@code Calculator} observer.
    */
-  public void addCalcObserver() {
-    return;
+  public void addCalcObserver(CalcController observer) {
+    this.observer = observer;
   }
-
-  
-  /**
-   * Add a {@code Type} observer.
-   */
-  public void addTypeObserver() {
-    return;
-  }
-  
 }
