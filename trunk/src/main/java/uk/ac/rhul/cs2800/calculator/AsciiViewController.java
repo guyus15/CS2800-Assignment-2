@@ -59,7 +59,7 @@ public class AsciiViewController implements CalcView {
   /**
    * Prints out the calculator options to the user.
    */
-  public void showOptions() {
+  private void showOptions() {
     
     String optionString = "Choose one from the following:\n"
                           + "1) Calculate\n"
@@ -74,7 +74,7 @@ public class AsciiViewController implements CalcView {
    * Gets an expression from the user and uses it as an expression to be
    * evaluated.
    */
-  public void performCalculation() {
+  private void performCalculation() {
     System.out.println("Enter an expression to be calculated: ");
     currentExpression = scanner.nextLine();
     
