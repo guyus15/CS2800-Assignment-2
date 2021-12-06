@@ -6,7 +6,7 @@ package uk.ac.rhul.cs2800.calculator;
  * @author chamb
  */
 public interface CalcView {
-
+  
   /**
    * Returns a string expression given as input.
    *
@@ -24,10 +24,5 @@ public interface CalcView {
   /**
    * Add a {@code Calculator} observer.
    */
-  void addCalcObserver();
-  
-  /**
-   * Add a {@code Type} observer.
-   */
-  void addTypeObserver();
+  void addCalcObserver(CalcController observer);
 }

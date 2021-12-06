@@ -25,6 +25,17 @@ public class GuiViewController implements CalcView {
   @FXML
   RadioButton postfixRadio;
   
+  CalcController observer;
+  
+  /**
+   * Called upon the controller's initialisation.
+   * Sets the state of the radio buttons.
+   */
+  public void initialize() {
+    infixRadio.setSelected(true); // Initially selected.
+    postfixRadio.setSelected(false); // Initially deselected.
+  }
+  
   /**
    * Returns the expression given as input to the {@code inputText} text field.
    */
@@ -33,34 +44,71 @@ public class GuiViewController implements CalcView {
   }
   
   /**
-   * Sets the value of the {@code outputText} text field to {@code str}.
+   * Set the output text of the GUI.
+   */
+  public void setAnswer(String text) {
+    outputText.setText(text);
+  }
+  
+  /**
+   * Assign a {@code Calculator} observer.
+   */
+  public void addCalcObserver(CalcController observer) {
+    this.observer = observer;
+  }
+  
+  /**
+   * Responsible for notifying the CalcController observer that we want to
+   * perform a calculation.
    *
-   * @param str the value to set the {@code outputText} text field to. 
+   * @param event the button click event.
    */
-  public void setAnswer(String str) {
-    outputText.setText(str);
-  }
-  
-  
-  /**
-   * Add a {@code Calculator} observer.
-   */
-  public void addCalcObserver() {
-    return;
-  }
-  
-  /**
-   * Add a {@code Type} observer.
-   */
-  public void addTypeObserver() {
-    return;
-  }
-  
   @FXML
   private void submitExpression(ActionEvent event) {
     event.consume();
     
-    System.out.println(getExpression());
-    setAnswer("test answer");
+    try {
+      String answer = Float.toString(observer.calculate(inputText.getText()));
+      setAnswer(answer);
+      
+      outputText.setStyle("-fx-background-color: white;"); // Reset red error background colour.
+    } catch (Exception e) {
+      setAnswer(e.getMessage());
+      
+      outputText.setStyle("-fx-background-color: red;"); // Set red error background colour.
+    }
+  }
+  
+  /**
+   * Sets the mode of the calculator to calculate infix expressions.
+   *
+   * @param event the event associated with the button press.
+   */
+  @FXML
+  private void setToInfix(ActionEvent event) {
+    event.consume();
+    
+    // Set the expression type to be infix.
+    observer.setExpressionType(true);
+    
+    // Resetting the opposite button so it doesn't look like its active.
+    postfixRadio.setSelected(false);
+  }
+  
+  
+  /**
+   * Sets the mode of the calculator to calculate postfix expressions.
+   *
+   * @param event the event associated with the button press.
+   */
+  @FXML
+  private void setToPostfix(ActionEvent event) {
+    event.consume();
+
+    // Set the expression type to be postfix.
+    observer.setExpressionType(false);
+    
+    // Resetting the opposite button so it doesn't look like its active.
+    infixRadio.setSelected(false);
   }
 }
