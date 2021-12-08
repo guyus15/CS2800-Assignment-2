@@ -13,7 +13,7 @@ public class AsciiViewController implements CalcView {
   Scanner scanner;
   CalcController observer;
   
-  String currentExpression;
+  String currentExpression; // The current expression for the calculator to calculate.
   
   /**
    * Creates an instance of the {@code AsciiViewController}.
@@ -39,19 +39,23 @@ public class AsciiViewController implements CalcView {
       
       String userInput = scanner.nextLine();
       
-      if (userInput.equals("1")) {
-        performCalculation();
-      } else if (userInput.equals("2")) {
-        System.out.println("Switched to infix mode.\n");
-        observer.setExpressionType(true);
-      } else if (userInput.equals("3")) {
-        System.out.println("Switched to postfix mode.\n");
-        observer.setExpressionType(false);
-      } else if (userInput.equals("4")) {
-        System.out.println("Exited.");
-        shouldQuit = true;
-      } else {
-        System.out.println("Invalid input. Please enter value 1-4.");
+      switch (userInput) {
+        case "1":
+          performCalculation();
+          break;
+        case "2":
+          System.out.println("Switched to infix mode.\n");
+          observer.setExpressionType(true);
+          break;
+        case "3":
+          System.out.println("Switched to postfix mode.\n");
+          observer.setExpressionType(false);
+          break;
+        case "4":
+          System.out.println("Exited.");
+          break;
+        default:
+          System.out.println("Invalid input. Please enter a value 1-4.");
       }
     }
   }

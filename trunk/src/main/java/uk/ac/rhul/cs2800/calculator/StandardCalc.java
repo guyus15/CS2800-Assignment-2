@@ -42,6 +42,7 @@ public class StandardCalc extends Calculator {
     // Convert the infix expression to a postfix expression.
     String expression = convert(stringToEvaluate);
 
+    // Ultimately uses the reverse Polish calculator anyway to perform the calculation.
     return revPolishCalc.evaluate(expression);
   }
 
@@ -64,6 +65,7 @@ public class StandardCalc extends Calculator {
     
     Symbol poppedSymbol = Symbol.INVALID;
     
+    // Iterates through every item in the string separated by a space.
     for (String current : infixString.split(" ")) {
       
       Symbol currentSymbol = Symbol.INVALID;

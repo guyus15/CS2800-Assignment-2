@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 public class Stack {
 
-  ArrayList<Entry> entries;
-  int size;
+  ArrayList<Entry> entries; // A list of entries representing items in the stack.
+  int size; // The size of the stack.
 
 
   /**
