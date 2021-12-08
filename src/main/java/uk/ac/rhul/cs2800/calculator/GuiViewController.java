@@ -14,16 +14,38 @@ import javafx.scene.control.TextField;
  */
 public class GuiViewController implements CalcView {
   
+  /**
+   * The input field of the GUI, this is where the use will enter expressions.
+   */
   @FXML
   TextField inputText;
+  
+  /**
+   * The output field of the GUI, this is where the result of the calculation will be displayed.
+   */
   @FXML
   TextField outputText;
+  
+  
+  /**
+   * The calculate button. The user will press this to calculate their entered expression.
+   */
   @FXML 
   Button calculateButton;
+  
+  /**
+   * The infix radio button. The user will press this to calculate infix expressions.
+   */
   @FXML
   RadioButton infixRadio;
+  
+  
+  /**
+   * The postfix radio button. The user will press this to calculate postfix expressions.
+   */
   @FXML
   RadioButton postfixRadio;
+  
   
   CalcController observer;
   
@@ -33,7 +55,7 @@ public class GuiViewController implements CalcView {
    */
   public void initialize() {
     infixRadio.setSelected(true); // Initially selected.
-    postfixRadio.setSelected(false); // Initially deselected.
+    postfixRadio.setSelected(false); // Initially unselected.
   }
   
   /**
@@ -92,7 +114,7 @@ public class GuiViewController implements CalcView {
     observer.setExpressionType(true);
     
     // Resetting the opposite button so it doesn't look like its active.
-    postfixRadio.setSelected(false);
+    postfixRadio.setSelected(false);    
   }
   
   

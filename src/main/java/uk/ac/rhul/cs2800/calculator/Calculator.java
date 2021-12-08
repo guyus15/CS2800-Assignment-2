@@ -36,6 +36,6 @@ public abstract class Calculator {
       throw new InvalidExpressionException("Invalid expression.");
     }
     
-    return 0;
+    return 0; // Returns 0 by default.
   }
 }

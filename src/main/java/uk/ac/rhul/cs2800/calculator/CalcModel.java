@@ -8,7 +8,7 @@ package uk.ac.rhul.cs2800.calculator;
  */
 public class CalcModel {
   
-  Calculator currentCalc;
+  Calculator currentCalc; // Current calculator, either of type StandardCalc or RevPolishCalc.
   StandardCalc standardCalc;
   RevPolishCalc revPolishCalc;
   
@@ -27,7 +27,7 @@ public class CalcModel {
    * standard and reverse Polish.
    *
    * @param isInfix a boolean determining if the calculator should be infix or not. 
-Will be postfix if this is false.
+  Will be postfix if this is false.
    */
   public void setType(boolean isInfix) {
     if (isInfix) {

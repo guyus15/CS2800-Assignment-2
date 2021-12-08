@@ -51,6 +51,12 @@ public class NumStack {
     return size() == 0;
   }
   
+  
+  /**
+   * Returns the size of the {@code NumStack}.
+   *
+   * @return the size of the stack.
+   */
   int size() {
     return stack.size();
   }

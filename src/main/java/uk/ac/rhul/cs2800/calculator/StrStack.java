@@ -50,7 +50,11 @@ public class StrStack {
     return size() == 0;
   }
   
-  
+  /**
+   * Returns the size of the {@code StrStack}.
+   *
+   * @return the size of the stack.
+   */
   int size() {
     return stack.size();
   }

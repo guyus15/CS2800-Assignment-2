@@ -26,8 +26,9 @@ public class GuiView extends Application {
       loader.setClassLoader(getClass().getClassLoader());
       loader.setLocation(getClass().getClassLoader().getResource("Calculator.fxml"));
            
-      root = loader.load();
+      root = loader.load(); // Loads in the Calculator.fxml file.
       
+      // Sets the view of calculator controller so we can link it to the model.
       Driver.calcController.setView(loader.getController());
       
     } catch (IOException e) {
@@ -36,10 +37,11 @@ public class GuiView extends Application {
       return;
     }
         
-    Scene scene = new Scene(root, 600, 400);
+    Scene scene = new Scene(root, 600, 400); // Create a scene with dimensions 600x400.
 
     primaryStage.setTitle("Calculator");
     primaryStage.setScene(scene);
+    primaryStage.setResizable(false); // Make it so the user can't resize the window.
     primaryStage.show();
   }
 }

@@ -79,6 +79,7 @@ public class Entry {
       type = Type.STRING;
     }
     
+    // Sets the string to be the new string, resets the other values.
     number = 0;
     symbol = null;
     string = newString;
@@ -108,6 +109,7 @@ public class Entry {
       type = Type.SYMBOL;
     }
     
+    // Sets the symbol to be the new symbol, resets the other values.
     number = 0;
     string = null;
     symbol = newSymbol;
@@ -138,6 +140,7 @@ public class Entry {
       type = Type.NUMBER;
     }
     
+    // Sets the number to be the new number, resets the other values.
     string = null;
     symbol = null;
     number = newNumber;

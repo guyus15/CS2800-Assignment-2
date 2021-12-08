@@ -50,6 +50,11 @@ public class OpStack {
     return size() == 0;
   }
   
+  /**
+   * Returns the size of the {@code OpStack}.
+   *
+   * @return the size of the stack.
+   */
   int size() {
     return stack.size();
   }
