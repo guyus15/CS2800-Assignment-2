@@ -8,27 +8,25 @@ import org.junit.jupiter.api.Test;
 /**
  * This test case tests the Type enum.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class TypeTest {
-  
+
   Type type;
-  
+
   @BeforeEach
   void createType() {
     type = Type.INVALID;
   }
-  
+
   @Test
   void testTypeToString() {
     /*
-     * This test ensures the types's toString() method
-     * returns the expected string.
+     * This test ensures the types's toString() method returns the expected string.
      * 
-     * To make this test work I had to add a toString() method
-     * and constructor to the Type enum.
+     * To make this test work I had to add a toString() method and constructor to the Type enum.
      */
-    
+
     assertEquals(type.toString(), "Invalid");
   }
 }

@@ -3,9 +3,9 @@ package uk.ac.rhul.cs2800.calculator;
 import java.util.Objects;
 
 /**
- * The Entry class is used to represent various data types for the Stack class. 
+ * The Entry class is used to represent various data types for the Stack class.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class Entry {
 
@@ -24,7 +24,7 @@ public class Entry {
     type = Type.NUMBER;
   }
 
-  
+
   /**
    * Creates a new instance of the class Entry of type String.
    *
@@ -53,7 +53,7 @@ public class Entry {
   public Type getType() {
     return type;
   }
-  
+
   /**
    * Returns the entry's string.
    *
@@ -67,8 +67,8 @@ public class Entry {
       throw new BadTypeException("Incorrect type");
     }
   }
-  
-  
+
+
   /**
    * Sets the string of the entry and updates the type if necessary.
    *
@@ -78,13 +78,13 @@ public class Entry {
     if (type != Type.STRING) {
       type = Type.STRING;
     }
-    
+
     // Sets the string to be the new string, resets the other values.
     number = 0;
     symbol = null;
     string = newString;
   }
-  
+
   /**
    * Returns the entry's symbol.
    *
@@ -98,7 +98,7 @@ public class Entry {
       throw new BadTypeException("Incorrect type");
     }
   }
-  
+
   /**
    * Sets the symbol of the entry and updates the type if necessary.
    *
@@ -108,14 +108,14 @@ public class Entry {
     if (type != Type.SYMBOL) {
       type = Type.SYMBOL;
     }
-    
+
     // Sets the symbol to be the new symbol, resets the other values.
     number = 0;
     string = null;
     symbol = newSymbol;
   }
-  
-  
+
+
   /**
    * Returns the entry's value.
    *
@@ -129,7 +129,7 @@ public class Entry {
       throw new BadTypeException("Incorrect type");
     }
   }
-  
+
   /**
    * Sets the number of the entry and updates the type if necessary.
    *
@@ -139,7 +139,7 @@ public class Entry {
     if (type != Type.NUMBER) {
       type = Type.NUMBER;
     }
-    
+
     // Sets the number to be the new number, resets the other values.
     string = null;
     symbol = null;
@@ -151,30 +151,30 @@ public class Entry {
     if (this == obj) {
       return true;
     }
-    
+
     if (obj == null) {
       return false;
     }
-    
+
     if (getClass() != obj.getClass()) {
       return false;
     }
-    
+
     Entry other = (Entry) obj;
     return Float.floatToIntBits(number) == Float.floatToIntBits(other.number)
         && Objects.equals(string, other.string) && symbol == other.symbol && type == other.type;
   }
-  
+
   @Override
   public String toString() {
     String returnString = "";
-    
+
     switch (type) {
       case NUMBER:
         returnString = Float.toString(number);
         break;
       case STRING:
-        returnString = string; 
+        returnString = string;
         break;
       case SYMBOL:
         returnString = symbol.toString();
@@ -182,7 +182,7 @@ public class Entry {
       default:
         break;
     }
-    
+
     return returnString;
   }
 }

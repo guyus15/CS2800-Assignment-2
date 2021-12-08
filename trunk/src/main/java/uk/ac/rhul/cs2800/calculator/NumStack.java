@@ -3,20 +3,20 @@ package uk.ac.rhul.cs2800.calculator;
 /**
  * The NumStack class acts as a facade for the Stack class to hide unnecessary detail.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class NumStack {
-  
+
   Stack stack;
-  
-  
+
+
   /**
    * Creates a new instance of the NumStack class.
    */
   public NumStack() {
     stack = new Stack();
   }
-  
+
   /**
    * Push a float value onto the stack.
    *
@@ -25,7 +25,7 @@ public class NumStack {
   public void push(float floatValue) {
     stack.push(floatValue);
   }
- 
+
   /**
    * Pop a value off the stack.
    *
@@ -41,7 +41,7 @@ public class NumStack {
       return Integer.MAX_VALUE;
     }
   }
-  
+
   /**
    * Returns true if the NumStack is empty.
    *
@@ -50,8 +50,8 @@ public class NumStack {
   public boolean isEmpty() {
     return size() == 0;
   }
-  
-  
+
+
   /**
    * Returns the size of the {@code NumStack}.
    *
@@ -60,5 +60,5 @@ public class NumStack {
   int size() {
     return stack.size();
   }
-  
+
 }

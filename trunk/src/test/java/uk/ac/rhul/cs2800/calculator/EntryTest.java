@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 /**
  * This test case tests the Entry class.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class EntryTest {
   Entry floatEntry;
@@ -28,141 +28,129 @@ public class EntryTest {
   @Test // Test 1
   void testGetFloatEntryType() {
     /*
-     * This test ensures that we get the correct type from the entry
-     * when that type is given in the constructor.
+     * This test ensures that we get the correct type from the entry when that type is given in the
+     * constructor.
      * 
-     * To make this test work I had to change the entry's type
-     * depending on the overloaded constructor which was used
-     * to create the entry.
+     * To make this test work I had to change the entry's type depending on the overloaded
+     * constructor which was used to create the entry.
      */
-    
+
     assertEquals(floatEntry.getType(), Type.NUMBER);
   }
 
   @Test // Test 2
   void testGetStringEntryType() {
     /*
-     * This test ensures that we get the correct type from the entry
-     * when that type is given in the constructor.
+     * This test ensures that we get the correct type from the entry when that type is given in the
+     * constructor.
      * 
-     * To make this test work I had to change the entry's type
-     * depending on the overloaded constructor which was used
-     * to create the entry.
+     * To make this test work I had to change the entry's type depending on the overloaded
+     * constructor which was used to create the entry.
      */
-    
+
     assertEquals(stringEntry.getType(), Type.STRING);
   }
 
   @Test // Test 3
   void testGetSymbolEntryType() {
     /*
-     * This test ensures that we get the correct type from the entry
-     * when that type is given in the constructor.
+     * This test ensures that we get the correct type from the entry when that type is given in the
+     * constructor.
      * 
-     * To make this test work I had to change the entry's type
-     * depending on the overloaded constructor which was used
-     * to create the entry.
+     * To make this test work I had to change the entry's type depending on the overloaded
+     * constructor which was used to create the entry.
      */
-    
+
     assertEquals(symbolEntry.getType(), Type.SYMBOL);
   }
 
   @Test // Test 4
   void testGetStringEntryString() throws BadTypeException {
     /*
-     * To make this test work I had add a check to the getString()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type String.
+     * To make this test work I had add a check to the getString() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type String.
      */
-    
+
     assertEquals(stringEntry.getString(), "test");
   }
 
   @Test // Test 5
   void testGetFloatEntryString() {
     /*
-     * To make this test work I had add a check to the getString()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type String.
+     * To make this test work I had add a check to the getString() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type String.
      */
-    
+
     assertThrows(BadTypeException.class, () -> floatEntry.getString());
   }
 
   @Test // Test 6
   void testGetSymbolEntryString() {
     /*
-     * To make this test work I had add a check to the getString()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type String.
+     * To make this test work I had add a check to the getString() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type String.
      */
-    
+
     assertThrows(BadTypeException.class, () -> symbolEntry.getString());
   }
 
   @Test // Test 7
   void testGetStringEntrySymbol() {
     /*
-     * To make this test work I had add a check to the getSymbol()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type Symbol.
+     * To make this test work I had add a check to the getSymbol() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type Symbol.
      */
-    
+
     assertThrows(BadTypeException.class, () -> stringEntry.getSymbol());
   }
 
   @Test // Test 8
   void testGetFloatEntrySymbol() {
     /*
-     * To make this test work I had add a check to the getSymbol()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type Symbol.
+     * To make this test work I had add a check to the getSymbol() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type Symbol.
      */
-    
+
     assertThrows(BadTypeException.class, () -> floatEntry.getSymbol());
   }
 
   @Test // Test 9
   void testGetSymbolEntrySymbol() throws BadTypeException {
     /*
-     * To make this test work I had add a check to the getSymbol()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type Symbol.
+     * To make this test work I had add a check to the getSymbol() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type Symbol.
      */
-    
+
     assertEquals(symbolEntry.getSymbol(), Symbol.INVALID);
   }
 
   @Test // Test 10
   void testGetStringEntryNumber() {
     /*
-     * To make this test work I had add a check to the getNumber()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type float.
+     * To make this test work I had add a check to the getNumber() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type float.
      */
-    
+
     assertThrows(BadTypeException.class, () -> stringEntry.getNumber());
   }
 
   @Test // Test 11
   void testGetFloatEntryNumber() throws BadTypeException {
     /*
-     * To make this test work I had add a check to the getNumber()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type float.
+     * To make this test work I had add a check to the getNumber() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type float.
      */
-    
+
     assertEquals(floatEntry.getNumber(), 0.0f);
   }
 
   @Test // Test 12
   void testGetSymbolEntryNumber() {
     /*
-     * To make this test work I had add a check to the getNumber()
-     * method which determines the type of the entry and throws a
-     * BadTypeException if it is not of type float.
+     * To make this test work I had add a check to the getNumber() method which determines the type
+     * of the entry and throws a BadTypeException if it is not of type float.
      */
-    
+
     assertThrows(BadTypeException.class, () -> symbolEntry.getNumber());
   }
 
@@ -245,35 +233,34 @@ public class EntryTest {
   @Test // Test 17
   void testEntrysNotEqual() {
     /*
-     * This test ensures that when two entries are instantiated with different values,
-     * the two are not considered equal to one another.
+     * This test ensures that when two entries are instantiated with different values, the two are
+     * not considered equal to one another.
      */
-    
+
     Entry floatEntry1 = new Entry(0.0f);
     Entry floatEntry2 = new Entry(1.0f);
     // Two float entries with different numbers should not be equal.
     assertFalse(floatEntry1.equals(floatEntry2));
-    
+
     Entry stringEntry1 = new Entry("test");
     Entry stringEntry2 = new Entry("second test");
     // Two String entries with different strings should not be equal.
     assertFalse(stringEntry1.equals(stringEntry2));
-    
+
     Entry symbolEntry1 = new Entry(Symbol.INVALID);
     Entry symbolEntry2 = new Entry(Symbol.DIVIDE);
     // Two Symbol entries with different symbols should not be equal.
     assertFalse(symbolEntry1.equals(symbolEntry2));
-    
+
     /*
-     * Two entrys with different type should not be equal
-     * to one another 
+     * Two entrys with different type should not be equal to one another
      */
     assertFalse(floatEntry1.equals(stringEntry1));
     assertFalse(floatEntry1.equals(symbolEntry1));
-    
+
     assertFalse(stringEntry1.equals(floatEntry1));
     assertFalse(stringEntry1.equals(symbolEntry1));
-    
+
     assertFalse(symbolEntry1.equals(floatEntry1));
     assertFalse(symbolEntry1.equals(stringEntry1));
   }
@@ -284,8 +271,8 @@ public class EntryTest {
      * This test the equals method for the entry class still works even when set to a different
      * type.
      * 
-     * To make this test work, I had to reset the non-affected entry attributes in each setter
-     * to null. (i.e when calling setNumber(), the entry string and symbol are changed to null).
+     * To make this test work, I had to reset the non-affected entry attributes in each setter to
+     * null. (i.e when calling setNumber(), the entry string and symbol are changed to null).
      */
 
     // Changing string and symbol types to float.
@@ -293,54 +280,53 @@ public class EntryTest {
     assertTrue(stringEntry.equals(floatEntry));
     symbolEntry.setNumber(0.0f);
     assertTrue(symbolEntry.equals(floatEntry));
-     
+
     // Resetting string and symbol entries.
     stringEntry = new Entry("test");
     symbolEntry = new Entry(Symbol.INVALID);
-    
+
     // Changing float and symbol types to string.
     floatEntry.setString("test");
     assertTrue(floatEntry.equals(stringEntry));
     symbolEntry.setString("test");
     assertTrue(symbolEntry.equals(stringEntry));
-    
+
     // Resetting float and symbol entries.
     floatEntry = new Entry(0.0f);
     symbolEntry = new Entry(Symbol.INVALID);
-    
+
     // Changing float and string types to symbol.
     floatEntry.setSymbol(Symbol.INVALID);
     assertTrue(floatEntry.equals(symbolEntry));
     stringEntry.setSymbol(Symbol.INVALID);
     assertTrue(stringEntry.equals(symbolEntry));
   }
-  
+
   @Test // Test 19
   void testEntryToString() {
     /*
-     * This test will ensure that the correct string is given when
-     * the toString() method is called on an Entry object.
+     * This test will ensure that the correct string is given when the toString() method is called
+     * on an Entry object.
      * 
-     * To make this test work I had to create an override method for 
-     * the toString() method which returns a string for each type
-     * of entry.
+     * To make this test work I had to create an override method for the toString() method which
+     * returns a string for each type of entry.
      */
-    
+
     assertEquals(floatEntry.toString(), "0.0");
     assertEquals(stringEntry.toString(), "test");
     assertEquals(symbolEntry.toString(), "Invalid");
   }
-  
+
   @SuppressWarnings("unlikely-arg-type")
   @Test // Test 20
   void testEntryEquals() {
-    
+
     // Testing if two of the same objects returns true
     assertTrue(floatEntry.equals(floatEntry));
-    
+
     // Testing if an object and a null value returns false.
     assertFalse(floatEntry.equals(null));
-    
+
     // Testing if an object and another object being of different types returns false.
     assertFalse(floatEntry.equals(0.0f));
   }

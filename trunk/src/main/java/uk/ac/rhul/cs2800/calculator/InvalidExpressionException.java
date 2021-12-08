@@ -3,10 +3,10 @@ package uk.ac.rhul.cs2800.calculator;
 /**
  * This exception should be thrown when an invalid expression arises.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class InvalidExpressionException extends Exception {
-  
+
   private static final long serialVersionUID = 1L;
 
   /**

@@ -3,7 +3,7 @@ package uk.ac.rhul.cs2800.calculator;
 /**
  * The OpStack class acts as a facade for the Stack class to hide unnecessary detail. 
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class OpStack {
   
@@ -49,7 +49,7 @@ public class OpStack {
   public boolean isEmpty() {
     return size() == 0;
   }
-  
+
   /**
    * Returns the size of the {@code OpStack}.
    *

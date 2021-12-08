@@ -3,7 +3,7 @@ package uk.ac.rhul.cs2800.calculator;
 /**
  * This exception should be thrown when a given type is not expected.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class BadTypeException extends Exception {
 

@@ -1,21 +1,21 @@
 package uk.ac.rhul.cs2800.calculator;
 
 /**
- * The StrStack class acts acts a facade for the Stack class to hide unnecessary detail. 
+ * The StrStack class acts acts a facade for the Stack class to hide unnecessary detail.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class StrStack {
-  
+
   Stack stack;
-  
+
   /**
    * Creates a new instance of the StrStack class.
    */
   public StrStack() {
     stack = new Stack();
   }
-  
+
   /**
    * Push a string value onto the stack.
    *
@@ -24,7 +24,7 @@ public class StrStack {
   public void push(String stringValue) {
     stack.push(stringValue);
   }
-  
+
   /**
    * Pop a value of the stack.
    *
@@ -40,16 +40,16 @@ public class StrStack {
       return "";
     }
   }
-  
+
   /**
    * Returns true if the StrStack is empty.
    *
-   * @return true or false depending if StrStack contains any items. 
+   * @return true or false depending if StrStack contains any items.
    */
   public boolean isEmpty() {
     return size() == 0;
   }
-  
+
   /**
    * Returns the size of the {@code StrStack}.
    *
