@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * The Stack class represents a last-in-first-out (LIFO) stack of objects.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 
 public class Stack {
@@ -21,7 +21,7 @@ public class Stack {
     entries = new ArrayList<Entry>();
     size = 0;
   }
-  
+
   /**
    * Push a float value onto the stack.
    *
@@ -32,7 +32,7 @@ public class Stack {
     entries.add(newEntry);
     size++;
   }
-  
+
   /**
    * Push a String value onto the stack.
    *
@@ -54,7 +54,7 @@ public class Stack {
     entries.add(newEntry);
     size++;
   }
-  
+
   /**
    * Pop a value off the stack.
    *
@@ -65,14 +65,14 @@ public class Stack {
     if (size == 0) {
       throw new EmptyStackException("Stack size must be greater than zero.");
     }
-    
+
     // The top-most item in the stack.
     Entry entry = entries.get(size - 1);
     entries.remove(size - 1);
     size--;
     return entry;
   }
-  
+
   /**
    * Returns the size of the stack.
    *
@@ -81,8 +81,8 @@ public class Stack {
   public int size() {
     return size;
   }
-  
-  
+
+
   /**
    * Returns the top-most object of the stack.
    *

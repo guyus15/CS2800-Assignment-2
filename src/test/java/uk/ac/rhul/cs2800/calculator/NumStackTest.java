@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 /**
  * This test case tests the NumStack class.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class NumStackTest {
   NumStack numStack;
@@ -68,7 +68,7 @@ public class NumStackTest {
     float testNumber = 1.0f;
     numStack.push(testNumber);
     float poppedNumber = numStack.pop();
-    
+
     // Check that the value we pushed on and the value we pushed off are equal.
     assertEquals(poppedNumber, testNumber);
   }
@@ -104,22 +104,22 @@ public class NumStackTest {
     /*
      * This test ensures that the isEmpty method returns true when the stack contains no elements.
      * 
-     * To make this test work, I had to add a isEmpty method to the NumStack which uses
-     * the size of the stack to determine if it is empty.
+     * To make this test work, I had to add a isEmpty method to the NumStack which uses the size of
+     * the stack to determine if it is empty.
      */
 
     assertEquals(numStack.isEmpty(), true);
   }
-  
+
   @Test // Test 7
   void testIsNotEmpty() {
     /*
-     * This test ensures that the isEmpty method returns false 
-     * when the stack contains some elements.
+     * This test ensures that the isEmpty method returns false when the stack contains some
+     * elements.
      */
-    
+
     numStack.push(0.0f);
     assertEquals(numStack.isEmpty(), false);
   }
-  
+
 }

@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 /**
  * This test case tests the Driver class.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class DriverTest {
 

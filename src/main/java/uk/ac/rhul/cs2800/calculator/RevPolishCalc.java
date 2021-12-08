@@ -4,7 +4,7 @@ package uk.ac.rhul.cs2800.calculator;
  * A Reverse Polish Calculator implementation of the Calculator. Supports evaluating
  * postfix expressions.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class RevPolishCalc extends Calculator {
   
@@ -114,5 +114,5 @@ public class RevPolishCalc extends Calculator {
         return Float.MAX_VALUE;
     }
   }
-  
+
 }

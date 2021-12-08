@@ -3,7 +3,7 @@ package uk.ac.rhul.cs2800.calculator;
 /**
  * This enum is used to determine an entry symbol.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public enum Symbol {
   /** Left bracket symbol. */
@@ -20,18 +20,18 @@ public enum Symbol {
   MINUS("-"),
   /** Invalid symbol. */
   INVALID("Invalid");
-  
+
   String symbolString;
-  
+
   Symbol(String string) {
     symbolString = string;
   }
-  
+
   @Override
   public String toString() {
     return symbolString;
   }
-  
+
   /**
    * Converts a String to the equivalent symbol enum.
    *
@@ -40,14 +40,14 @@ public enum Symbol {
    */
   public static Symbol toSymbol(String strSymbol) {
     Symbol currentSymbol = Symbol.INVALID;
-    
+
     for (Symbol symbol : Symbol.values()) {
       if (symbol.toString().equals(strSymbol)) {
         currentSymbol = symbol;
         break;
       }
     }
-    
+
     return currentSymbol;
   }
 }

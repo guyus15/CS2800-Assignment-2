@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 /**
  * This test case tests the StandardCalc class. 
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class StandardCalcTest {
   

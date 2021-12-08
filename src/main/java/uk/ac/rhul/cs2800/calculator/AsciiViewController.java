@@ -3,10 +3,10 @@ package uk.ac.rhul.cs2800.calculator;
 import java.util.Scanner;
 
 /**
- * The main view for the command-line version of the Calculator. Along with the GuiView,
- * this will be the main way that user's interact with the application.
+ * The main view for the command-line version of the Calculator. Along with the GuiView, this will
+ * be the main way that user's interact with the application.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class AsciiViewController implements CalcView {
   

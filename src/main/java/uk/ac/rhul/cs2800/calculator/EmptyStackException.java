@@ -1,11 +1,10 @@
 package uk.ac.rhul.cs2800.calculator;
 
 /**
- * This exception should be thrown when a method which requires the stack 
- * to have a size greater than zero is called, but the actual stack size is 
- * zero.
+ * This exception should be thrown when a method which requires the stack to have a size greater
+ * than zero is called, but the actual stack size is zero.
  *
- * @author chamb
+ * @author Guy Chamberlain-Webber
  */
 public class EmptyStackException extends Exception {
 
