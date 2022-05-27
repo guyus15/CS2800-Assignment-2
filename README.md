@@ -1,4 +1,5 @@
 # Calculator
+A calculator application built in Java allowing use of both infix and reverse-Polish notation. Uses toolchains such as Javadoc, Maven, and Junit.
 
 #### Building the application
 In order to build the application, you must first be in the root calculator folder. This is the folder in which this README file is contained.
